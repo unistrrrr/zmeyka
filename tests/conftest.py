@@ -11,7 +11,6 @@ import pytest_timeout
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 sys.path.append(str(BASE_DIR))
 
-# Hide the pygame screen
 os.environ['SDL_VIDEODRIVER'] = 'dummy'
 
 TIMEOUT_ASSERT_MSG = (
@@ -26,7 +25,7 @@ TIMEOUT_ASSERT_MSG = (
 
 
 def import_the_snake():
-    import the_snake  # noqa
+    import the_snake
 
 
 @pytest.fixture(scope='session')
